@@ -11,6 +11,8 @@ from output import *
 class BeachModel(DynamicModel):
     """
     Important Changes to Source Code:
+    Program Files (x86)/pcraster-4.1.0_x86-64/python/pcraster/..
+
     This model requires an edited version of PCRaster,
     1) Timeoutput.py file
     has been edited to allow saving tss files in specified directories.
