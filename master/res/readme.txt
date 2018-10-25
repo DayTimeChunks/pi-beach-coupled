@@ -1,0 +1,1 @@
+You can delete all sub-folders in this "res" folder, EXCEPT the "dummy" subfolder
