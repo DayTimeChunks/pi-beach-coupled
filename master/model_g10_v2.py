@@ -633,7 +633,7 @@ class BeachModel(DynamicModel):
             beach_initial = "maps\\initial\\"
             print("Preparing initial conditions for next BEACH run")
             print("Timestep " + str(self.currentTimeStep()))
-            print("Timestep shoud be 1 day before lisem_runs")
+            # print("Timestep shoud be 1 day before lisem_runs")
             for layer in range(self.num_layers):
                 # Moisture
                 self.report(self.theta[layer], "thetiZ" + str(layer),
@@ -930,12 +930,13 @@ class BeachModel(DynamicModel):
                     if self.correction:
                         ev_type = self.event_type[self.period - 1]
                         if ev_type == 1 or ev_type == 3:  # No correction on this day(s)!
-                            print("Correction True, timestep is one of 187, 198, 224, 241, 242, map: "
-                                  "zero_map, no LISEM input for this day")
+                            pass
+                            # print("Correction True, timestep is one of 187, 198, 224, 241, 242, map: "
+                            #       "zero_map, no LISEM input for this day")
                             # Also no extra runoff on this day, which is not considered in LISEM.
                         elif ev_type == 2:
-                            print("Timestep is one of: 182, or 213 = " + str(self.currentTimeStep()))
-                            print("Correction True, map: " + self.map_list[self.period - 1])
+                            # print("Timestep is one of: 182, or 213 = " + str(self.currentTimeStep()))
+                            # print("Correction True, map: " + self.map_list[self.period - 1])
                             # Infil
                             infil_GA = readmap("res\\" + str(self.period - 1) + self.map_list[self.period - 1])
                             # Runoff LISEM
@@ -948,9 +949,9 @@ class BeachModel(DynamicModel):
                         elif ev_type == 4:
                             mpath = "res\\" + str(self.period - 2) + "\\"
                             # Do correct, same as ev_type == 1, but folder path may change!
-                            print("Event type 4, will correct two time steps in this run"
-                                  "input from LISEM map: "
-                                  "infiltration.map in path: " + mpath)  # No day break in BEACH
+                            # print("Event type 4, will correct two time steps in this run"
+                            #       "input from LISEM map: "
+                            #       "infiltration.map in path: " + mpath)  # No day break in BEACH
                             infil_GA = readmap(mpath + "infiltration.map")
                             # Runoff LISEM
                             # path = os.getcwd() + "\\res\\" + str(self.period - 1) + "\\"
@@ -970,8 +971,8 @@ class BeachModel(DynamicModel):
                         if ev_type == 1 or ev_type == 3:
                             self.correction = False
                             mpath = "res\\" + str(self.period - 1) + "\\"
-                            print("Event type 1, input from LISEM map: "
-                                  "infiltration.map in path: " + mpath)  # No day break in BEACH
+                            # print("Event type 1, input from LISEM map: "
+                            #       "infiltration.map in path: " + mpath)  # No day break in BEACH
                             infil_GA = readmap(mpath + "infiltration.map")
                             # Runoff LISEM
                             runoff_array = np.loadtxt(mpath + "hydro.txt", skiprows=3, delimiter=",",
@@ -982,10 +983,11 @@ class BeachModel(DynamicModel):
                             GA_runoff_m3 = m3.cumsum()[-1]
                         elif ev_type == 2:
                             self.correction = False
-                            print("Timestep is one of 183 or 214 = " + str(self.currentTimeStep()))
+                            # print("Timestep is one of 183 or 214 = " + str(self.currentTimeStep()))
+                            # print("Subtract cumulative infiltration from map: " + map_subtract)
                             map_total = "res\\" + str(self.period - 1) + "\\infiltration.map"
                             map_subtract = "res\\" + str(self.period - 1) + self.map_list[self.period - 1]
-                            print("Subtract cumulative infiltration from map: " + map_subtract)
+
                             infil_GA = readmap(map_total) - readmap(map_subtract)
                             # Runoff LISEM
                             path = os.getcwd() + "\\res\\" + str(self.period - 1) + "\\"
@@ -1000,8 +1002,8 @@ class BeachModel(DynamicModel):
                             self.consecutive += 1
                             if self.consecutive > 1:
                                 mpath = "res\\" + str(self.period - 1) + "\\"
-                                print("Event type 4, second consecutive correction, TS: 243 =?: "
-                                      "infiltration.map in path: " + mpath)  # No day break in BEACH
+                                # print("Event type 4, second consecutive correction, TS: 243 =?: "
+                                #       "infiltration.map in path: " + mpath)  # No day break in BEACH
                                 infil_GA = readmap(mpath + "infiltration.map")
                                 # Runoff LISEM
                                 runoff_array = np.loadtxt(mpath + "hydro.txt", skiprows=3, delimiter=",",

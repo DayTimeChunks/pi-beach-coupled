@@ -46,7 +46,7 @@ Flood stats=floodstats.txt
 [Simulation times]
 Begin time=0
 End time=110.0
-Timestep=126.0
+Timestep=10.0
 
 [General options]
 Nr user Cores=0

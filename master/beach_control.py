@@ -121,7 +121,7 @@ def run_coupled_sample(sample_nr, firstTimeStep,  # 166 -> 14/03/2016
 
             os.chdir(os.getcwd() + r"\\LISEM")
             path_run = r"..\\Alteck" + str(lisem_runs[period]) + ".run"
-            command_line = r"lisem -b -r " + str(path_run)
+            command_line = r"lisem -b -ni -r " + str(path_run)
             args = shlex.split(command_line)
 
             print("Starting LISEM")
