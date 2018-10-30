@@ -91,7 +91,8 @@ def run_coupled_sample(sample_nr, firstTimeStep,  # 166 -> 14/03/2016
             lastTimeStep = lisem_runs[period]
 
         print("Starting BEACH")
-        print("run = " + str(runs))
+        # print("run = " + str(runs))
+        print("Sample nr. = " + str(sample_nr))
         print("period = " + str(period))
         myAlteck16 = BeachModel("maps\\static\\clone_nom.map",
                                 params, param_values, upper, period,
@@ -121,7 +122,7 @@ def run_coupled_sample(sample_nr, firstTimeStep,  # 166 -> 14/03/2016
 
             os.chdir(os.getcwd() + r"\\LISEM")
             path_run = r"..\\Alteck" + str(lisem_runs[period]) + ".run"
-            command_line = r"lisem -b -ni -r " + str(path_run)
+            command_line = r"lisem -b -r " + str(path_run)
             args = shlex.split(command_line)
 
             print("Starting LISEM")
@@ -165,7 +166,7 @@ def run_coupled_sample(sample_nr, firstTimeStep,  # 166 -> 14/03/2016
                     continue
             else:
                 print("Error code: " + str(code))
-                print("Exiting coupled loop")
+                print("Exiting coupled loop at smp nr. ", str(sample_nr))
                 break
 
     print("All runs finished")
@@ -187,6 +188,6 @@ def run_coupled_sample(sample_nr, firstTimeStep,  # 166 -> 14/03/2016
 
 
 if __name__ == "__main__":
-    mc_samples = 1
+    mc_samples = 2
     create_dirs(mc_samples)
     coupled_montecarlo_setup(smps=mc_samples, firstTimeStep=166)

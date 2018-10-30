@@ -105,7 +105,7 @@ class BeachModel(DynamicModel):
         self.LF = True
         self.ETP = True
 
-        self.PEST = False
+        self.PEST = True
         self.TRANSPORT = True
         # Run fate processes
         self.ROM = True

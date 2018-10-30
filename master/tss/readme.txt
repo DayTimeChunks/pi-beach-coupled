@@ -1,0 +1,1 @@
+You can delete only the "output" folder.

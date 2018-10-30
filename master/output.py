@@ -351,13 +351,13 @@ def defineTopSoilConditions(model):
     #                                            noHeader=False)
 
     # Transect theta
-    # model.resW_z0_theta_nor = TimeoutputTimeseries("resW_z0_theta_nor", model, nominal("maps\\sampling\\north_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
-    # model.resW_z0_theta_val = TimeoutputTimeseries("resW_z0_theta_val", model, nominal("maps\\sampling\\valley_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
-    # model.resW_z0_theta_sou = TimeoutputTimeseries("resW_z0_theta_sou", model, nominal("maps\\sampling\\south_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
-    #
-    # model.resW_z1_theta_nor = TimeoutputTimeseries("resW_z1_theta_nor", model, nominal("maps\\sampling\\north_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
-    # model.resW_z1_theta_val = TimeoutputTimeseries("resW_z1_theta_val", model, nominal("maps\\sampling\\valley_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
-    # model.resW_z1_theta_sou = TimeoutputTimeseries("resW_z1_theta_sou", model, nominal("maps\\sampling\\south_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
+    model.resW_z0_theta_nor = TimeoutputTimeseries("resW_z0_theta_nor", model, nominal("maps\\sampling\\north_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
+    model.resW_z0_theta_val = TimeoutputTimeseries("resW_z0_theta_val", model, nominal("maps\\sampling\\valley_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
+    model.resW_z0_theta_sou = TimeoutputTimeseries("resW_z0_theta_sou", model, nominal("maps\\sampling\\south_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
+
+    model.resW_z1_theta_nor = TimeoutputTimeseries("resW_z1_theta_nor", model, nominal("maps\\sampling\\north_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
+    model.resW_z1_theta_val = TimeoutputTimeseries("resW_z1_theta_val", model, nominal("maps\\sampling\\valley_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
+    model.resW_z1_theta_sou = TimeoutputTimeseries("resW_z1_theta_sou", model, nominal("maps\\sampling\\south_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
     #
     # model.resW_z2_theta_nor = TimeoutputTimeseries("resW_z2_theta_nor", model, nominal("maps\\sampling\\north_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
     # model.resW_z2_theta_val = TimeoutputTimeseries("resW_z2_theta_val", model, nominal("maps\\sampling\\valley_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
@@ -384,13 +384,13 @@ def defineTopSoilConditions(model):
     #                                                noHeader=False)
 
     # Transect Temp
-    # model.resW_z0_temp_nor = TimeoutputTimeseries("resW_z0_temp_nor", model, nominal("maps\\sampling\\north_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
-    # model.resW_z0_temp_val = TimeoutputTimeseries("resW_z0_temp_val", model, nominal("maps\\sampling\\valley_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
-    # model.resW_z0_temp_sou = TimeoutputTimeseries("resW_z0_temp_sou", model, nominal("maps\\sampling\\south_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
-    #
-    # model.resW_z1_temp_nor = TimeoutputTimeseries("resW_z1_temp_nor", model, nominal("maps\\sampling\\north_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
-    # model.resW_z1_temp_val = TimeoutputTimeseries("resW_z1_temp_val", model, nominal("maps\\sampling\\valley_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
-    # model.resW_z1_temp_sou = TimeoutputTimeseries("resW_z1_temp_sou", model, nominal("maps\\sampling\\south_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
+    model.resW_z0_temp_nor = TimeoutputTimeseries("resW_z0_temp_nor", model, nominal("maps\\sampling\\north_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
+    model.resW_z0_temp_val = TimeoutputTimeseries("resW_z0_temp_val", model, nominal("maps\\sampling\\valley_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
+    model.resW_z0_temp_sou = TimeoutputTimeseries("resW_z0_temp_sou", model, nominal("maps\\sampling\\south_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
+
+    model.resW_z1_temp_nor = TimeoutputTimeseries("resW_z1_temp_nor", model, nominal("maps\\sampling\\north_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
+    model.resW_z1_temp_val = TimeoutputTimeseries("resW_z1_temp_val", model, nominal("maps\\sampling\\valley_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
+    model.resW_z1_temp_sou = TimeoutputTimeseries("resW_z1_temp_sou", model, nominal("maps\\sampling\\south_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
     #
     # model.resW_z2_temp_nor = TimeoutputTimeseries("resW_z2_temp_nor", model, nominal("maps\\sampling\\north_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
     # model.resW_z2_temp_val = TimeoutputTimeseries("resW_z2_temp_val", model, nominal("maps\\sampling\\valley_ave"), noHeader=False, save_path=save_path, period=model.period, sample_nr=model.sample_nr)
@@ -447,25 +447,25 @@ def getTopSoilConditions(model, layer=0):
 
     if layer == 0:
         model.resW_z0_theta.sample(theta_ave)
-        # model.resW_z0_theta_nor.sample(theta_ave_nor)
-        # model.resW_z0_theta_val.sample(theta_ave_val)
-        # model.resW_z0_theta_sou.sample(theta_ave_sou)
+        model.resW_z0_theta_nor.sample(theta_ave_nor)
+        model.resW_z0_theta_val.sample(theta_ave_val)
+        model.resW_z0_theta_sou.sample(theta_ave_sou)
 
         model.resW_z0_temp.sample(temp_ave)
-        # model.resW_z0_temp_nor.sample(temp_ave_nor)
-        # model.resW_z0_temp_val.sample(temp_ave_val)
-        # model.resW_z0_temp_sou.sample(temp_ave_sou)
+        model.resW_z0_temp_nor.sample(temp_ave_nor)
+        model.resW_z0_temp_val.sample(temp_ave_val)
+        model.resW_z0_temp_sou.sample(temp_ave_sou)
 
     elif layer == 1:
         model.resW_z1_theta.sample(theta_ave)
-        # model.resW_z1_theta_nor.sample(theta_ave_nor)
-        # model.resW_z1_theta_val.sample(theta_ave_val)
-        # model.resW_z1_theta_sou.sample(theta_ave_sou)
+        model.resW_z1_theta_nor.sample(theta_ave_nor)
+        model.resW_z1_theta_val.sample(theta_ave_val)
+        model.resW_z1_theta_sou.sample(theta_ave_sou)
 
         model.resW_z1_temp.sample(temp_ave)
-        # model.resW_z1_temp_nor.sample(temp_ave_nor)
-        # model.resW_z1_temp_val.sample(temp_ave_val)
-        # model.resW_z1_temp_sou.sample(temp_ave_sou)
+        model.resW_z1_temp_nor.sample(temp_ave_nor)
+        model.resW_z1_temp_val.sample(temp_ave_val)
+        model.resW_z1_temp_sou.sample(temp_ave_sou)
 
     elif layer == 2:
         model.resW_z2_theta.sample(theta_ave)
